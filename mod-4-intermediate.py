@@ -38,8 +38,8 @@ def shift_letter(letter, shift):
         if shifted_ascii > ord("Z"):
             shifted_ascii -= 26
         return chr(shifted_ascii)
-    
- 
+
+
 def caesar_cipher(message, shift):
     '''Caesar Cipher. 
     6 points.
