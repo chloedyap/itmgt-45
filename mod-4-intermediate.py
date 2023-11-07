@@ -1,11 +1,3 @@
-#!/usr/bin/env python
-# coding: utf-8
-
-# ## Intermediate Individual Assignment
-
-# In[22]:
-
-
 def shift_letter(letter, shift):
     '''Shift Letter. 
     4 points.
@@ -46,15 +38,6 @@ def shift_letter(letter, shift):
         if shifted_ascii > ord("Z"):
             shifted_ascii -= 26
         return chr(shifted_ascii)
-    
-print(shift_letter("A", 0))
-print(shift_letter("A", 2)) 
-print(shift_letter("Z", 1)) 
-print(shift_letter("X", 5)) 
-print(shift_letter(" ", 10)) 
-
-
-# In[21]:
 
 
 def caesar_cipher(message, shift):
@@ -89,11 +72,6 @@ def caesar_cipher(message, shift):
         elif letter == " ":
             cipher_message += " "
     return cipher_message
-
-caesar_cipher("HELLO WORLD", 1)
-
-
-# In[41]:
 
 
 def shift_by_letter(letter, letter_shift):
@@ -133,15 +111,6 @@ def shift_by_letter(letter, letter_shift):
         final_letter = (alphabet.index(letter) + alphabet.index(letter_shift)) % 26
         return(alphabet[final_letter])
     
-print(shift_by_letter("A", "W"))
-print(shift_by_letter("B", "X")) 
-print(shift_by_letter("C", "Y")) 
-print(shift_by_letter(" ", _)) 
-print(shift_by_letter("L", "Y")) 
-
-
-# In[1]:
-
 
 def vigenere_cipher(message, key):
     '''Vigenere Cipher. 
@@ -191,8 +160,4 @@ def vigenere_cipher(message, key):
             result += alphabet[encrypted_letter_index]
 
     return result
-
-print(vigenere_cipher("A C", "KEY"))
-print(vigenere_cipher("ABCD", "WXYZ"))
-print(vigenere_cipher("HELLO WORLD", "KEY"))
 
