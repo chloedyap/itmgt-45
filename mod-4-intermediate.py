@@ -34,9 +34,7 @@ def shift_letter(letter, shift):
     if letter == " ":
         return " "
     else:
-        shifted_ascii = ord(letter) + shift
-        if shifted_ascii > ord("Z"):
-            shifted_ascii -= 26
+        shifted_ascii = (ord(letter) - ord('A') + shift) % 26 + ord('A')
         return chr(shifted_ascii)
 
 
@@ -65,9 +63,7 @@ def caesar_cipher(message, shift):
     
     for letter in message:
         if letter.isupper():
-            shifted_ascii = ord(letter) + shift
-            if shifted_ascii > ord("Z"):
-                shifted_ascii -= 26
+            shifted_ascii = (ord(letter) - ord('A') + shift) % 26 + ord('A')
             cipher_message += chr(shifted_ascii)
         elif letter == " ":
             cipher_message += " "
